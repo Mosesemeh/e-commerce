@@ -1,0 +1,118 @@
+:root{
+    --gold:rgb(201, 167, 17);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+header a.logo, h1,h2,h3,h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+.btn{
+    border: 0;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 50px;
+    display: inline-block;
+}
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 20px;        
+}
+header div.columns{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+header div.columns a{
+    color: white;
+    text-decoration: none;
+}
+header a.logo{
+    line-height: 14px;
+    padding-top: 4px;
+}
+header a.logo span{
+    display: block;
+    font-size:11px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #aaa;
+}
+header div.columns nav{
+    display: flex;
+    align-items: center;
+
+}
+header div.columns nav a{
+    margin: 0 10px;
+
+}
+header div.columns nav a.active{
+    color: var(--gold);
+}
+div.intro{
+    position: relative;
+}
+div.intro div.overlay{
+    background-color: #000;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+}
+div.intro div.background{
+    position: absolute;
+    inset:0;
+}
+div.intro div.background img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+div.intro div.content{
+    padding-top: 140px;
+    padding-bottom: 100px;
+    text-align: center;
+    position: relative;
+}
+div.intro div.content h1{
+    font-size: 5rem;
+}
+div.intro div.content h2{
+    font-size: 16px;
+    font-family: 'open sans', sans-serif;
+}
+div.intro div.content .btn{
+    margin-top: 50px;
+}
+div.content-blocks{
+    padding: 50px 20px;
+}
+div.content-block{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+div.content-block div.texts{
+    padding: 20px;
+}
+div.content-block div.texts p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
