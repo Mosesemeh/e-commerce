@@ -107,6 +107,7 @@ div.content-blocks{
 }
 div.content-block{
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
 }
 div.content-block div.texts{
@@ -115,4 +116,7 @@ div.content-block div.texts{
 div.content-block div.texts p{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+div.content-block:nth-child(even) div.side-img{
+    order: 2;
 }
