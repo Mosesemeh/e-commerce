@@ -27,6 +27,11 @@ header a.logo, h1,h2,h3,h4{
     padding: 15px 50px;
     display: inline-block;
 }
+.btn.outline{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+} 
 header{
     position: absolute;
     width: 100%;
@@ -103,20 +108,66 @@ div.intro div.content .btn{
     margin-top: 50px;
 }
 div.content-blocks{
-    padding: 50px 20px;
+    padding: 0px 20px;
 }
 div.content-block{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    margin: 80px 0;
 }
 div.content-block div.texts{
-    padding: 20px;
+    padding: 0;
 }
 div.content-block div.texts p{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
 }
 div.content-block:nth-child(even) div.side-img{
     order: 2;
+}
+div.content-block div.side-img{
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+div.content-block div.side-img img{
+    display: block;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+div.content-block:nth-child(even) div.side-img{
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-left:0;    
+}
+div.content-block:nth-child(even) div.side-img img{
+    left: -10px;
+}
+div.reviews{
+    padding: 0 20px;
+}
+div.reviews div.columns{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 30px;
+}
+div.reviews-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+div.review{
+    border: 1px solid #fff;
+    padding: 20px;
+}
+div.review p{
+    font-size:0.7rem; 
+}
+div.review time{
+    font-size: 0.7rem;
 }
