@@ -9,6 +9,7 @@
 body{
     background-color: black;
     color: white;
+    margin-bottom: 80px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 img{
@@ -47,11 +48,13 @@ header div.columns a{
     color: white;
     text-decoration: none;
 }
-header a.logo{
+a.logo{
     line-height: 14px;
     padding-top: 4px;
+    color: #fff;
+    text-decoration: none;
 }
-header a.logo span{
+a.logo span{
     display: block;
     font-size:11px;
     letter-spacing: 1px;
@@ -69,6 +72,11 @@ header div.columns nav a{
 }
 header div.columns nav a.active{
     color: var(--gold);
+}
+@media screen and (max-width: 768px) {
+    header div.columns nav{
+        display: none;
+    }
 }
 div.intro{
     position: relative;
@@ -100,6 +108,11 @@ div.intro div.content{
 div.intro div.content h1{
     font-size: 5rem;
 }
+@media screen and (max-width: 768px){
+    div.intro div.content h1{
+        font-size: 2rem;
+    }
+}
 div.intro div.content h2{
     font-size: 16px;
     font-family: 'open sans', sans-serif;
@@ -113,10 +126,17 @@ div.content-blocks{
 div.content-block{
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 90px;
+    grid-template-columns: 1fr;
+   column-gap: 90px;
+   row-gap: 20px;
     margin: 80px 0;
 }
+@media screen and (min-width: 768px){
+    div.content-block{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 div.content-block div.texts{
     padding: 0;
 }
@@ -126,10 +146,14 @@ div.content-block div.texts p{
     font-size: 0.8rem;
     color: #ccc;
 }
-div.content-block:nth-child(even) div.side-img{
-    order: 2;
+@media screen and (min-width: 768px){
+    div.content-block:nth-child(even) div.side-img{
+        order: 2;
+    }
 }
-div.side-img{
+
+div.side-img,
+div.side-img.right{
     border-left: 1px solid rgba(255,255,255,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
@@ -138,6 +162,11 @@ div.side-img img{
     position: relative;
     top: -10px;
     left: 10px;
+}
+@media screen and (max-width: 768px) {
+    div.side-img img{
+        width: calc(100% - 10px)
+    }
 }
 div.content-block:nth-child(even) div.side-img,
 div.side-img.right
@@ -150,6 +179,13 @@ div.content-block:nth-child(even) div.side-img img,
 div.side-img.right img
 {
     left: -10px;
+}
+@media screen and (max-width: 768px) {
+    div.content-block:nth-child(even) div.side-img img,
+    div.side-img.right img
+    {
+        left: 0px;
+    }
 }
 div.reviews{
     padding: 0 20px;
@@ -170,10 +206,20 @@ div.reviews div.columns{
      align-items: center;
      margin-bottom: 30px;
 }
+@media screen and (max-width: 768px) {
+    div.reviews div.columns{
+        display: block;
+    }
+}
 div.reviews-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+@media screen and (max-width: 768px) {
+    div.reviews-grid{
+        grid-template-columns: 1fr;
+    }
 }
 div.review{
     border: 1px solid #fff;
@@ -205,6 +251,11 @@ div.instagram div.columns{
     justify-content:space-between;
     margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+    div.instagram div.columns{
+        display: block;
+    }
+}
 .instagram-link{
     color:#fff;
     text-decoration: none;
@@ -214,18 +265,98 @@ div.instagram div.photos{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+@media screen and (max-width: 768px) {
+    div.instagram div.photos{
+        grid-template-columns: 1fr; 
+    }
+}
 div.booking{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 20px;
     margin-top: 80px;
-    gap: 40px;
+    margin-bottom: 80px;
+    gap: 60px;
 }
-input{
+@media screen and (max-width: 768px) {
+    div.booking{
+        grid-template-columns: 1fr;
+    }
+}
+div.booking a{
+    color: var(--gold);
+    text-decoration: none;
+}
+input[type="text"]{
     display: block;
     width: 100%;
     background-color: #000;
     color: #fff;
+    border: 1px solid #fff;  
+    padding: 14px 10px 10px;
+    border-radius: 3px;
+}
+div.booking label{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: #000;
+    padding: 0 4px;
+}
+div.booking label.cb{
+    left: 0;
+    top: 0;
+}
+input[type="checkbox"]{
+    margin-top: 40px;
+}
+div.booking button{
+    margin-top: 40px;
+    border-radius: 5px;
+}
+footer{
     border: 1px solid #fff;
-    padding: 10px;
+    padding: 40px 20px 30px;
+    margin: 50px 20px;
+    position: relative;
+}
+footer a.logo{
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    top: -18px;
+    left: 50%;
+    background-color: #000;
+    margin-left: -70px;
+    width: 140px;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+footer div.columns{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 768px) {
+    footer div.columns{
+        grid-template-columns: 1fr;
+        gap: 30px;  
+    }
+}
+footer div.columns div:nth-child(2){
+    text-align: center;
+}
+footer svg{
+    fill: #fff;
+    height: 20px;
+}
+footer div.columns div:nth-child(3) a{
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    footer div.columns div:nth-child(2){
+        text-align: left;
+    }    
 }
