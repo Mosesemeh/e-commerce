@@ -75,7 +75,7 @@ div.intro{
 }
 div.intro div.overlay{
     background-color: #000;
-    opacity: 0.7;
+    opacity: 0.8;
     position: absolute;
     top: 0;
     left: 0;
@@ -129,26 +129,40 @@ div.content-block div.texts p{
 div.content-block:nth-child(even) div.side-img{
     order: 2;
 }
-div.content-block div.side-img{
+div.side-img{
     border-left: 1px solid rgba(255,255,255,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
-div.content-block div.side-img img{
+div.side-img img{
     display: block;
     position: relative;
     top: -10px;
     left: 10px;
 }
-div.content-block:nth-child(even) div.side-img{
+div.content-block:nth-child(even) div.side-img,
+div.side-img.right
+{
     border-right: 1px solid rgba(255,255,255,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.5);
     border-left:0;    
 }
-div.content-block:nth-child(even) div.side-img img{
+div.content-block:nth-child(even) div.side-img img,
+div.side-img.right img
+{
     left: -10px;
 }
 div.reviews{
     padding: 0 20px;
+}
+div.reviews a{
+    color: #fff;
+    text-decoration: none;
+}
+div.reviews a:hover{
+    text-decoration: underline;
+} 
+div.review a:hover{
+    text-decoration: underline;
 }
 div.reviews div.columns{
      display: flex;
@@ -168,6 +182,50 @@ div.review{
 div.review p{
     font-size:0.7rem; 
 }
+div.review h3{
+    font-family: 'open sans', sans-serif;
+}
 div.review time{
+    display: block;
     font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+div.instagram{
+    margin-top: 80px;
+    padding: 0 20px;
+}
+div.instagram svg{
+    fill:white;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+div.instagram div.columns{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+.instagram-link{
+    color:#fff;
+    text-decoration: none;
+}
+div.instagram div.photos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+div.booking{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    margin-top: 80px;
+    gap: 40px;
+}
+input{
+    display: block;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
 }
