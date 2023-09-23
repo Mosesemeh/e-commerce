@@ -119,9 +119,15 @@ div.intro div.content h2{
 }
 div.intro div.content .btn{
     margin-top: 50px;
+    border-radius: 4px;
+}
+div.text-block{
+    max-width: 70rem;
+    margin: 50px auto;
+    padding: 10px 20px;
 }
 div.content-blocks{
-    padding: 0px 20px;
+    padding: 0px 100px;
 }
 div.content-block{
     display: grid;
@@ -328,7 +334,7 @@ footer a.logo{
     left: 50%;
     background-color: #000;
     margin-left: -70px;
-    width: 140px;
+    width: 100px;
 }
 footer a{
     color: #fff;
@@ -336,7 +342,7 @@ footer a{
 }
 footer div.columns{
     display: grid;
-    gap: 50px;
+    gap: 70px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 @media screen and (max-width: 768px) {
