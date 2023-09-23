@@ -142,7 +142,6 @@ div.content-block{
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 div.content-block div.texts{
     padding: 0;
 }
